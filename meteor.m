@@ -8,11 +8,11 @@ classdef meteor
     end
     methods
         function m = meteor(pos0,spd0,sz0,im)
-            pos = pos0;
-            spd = spd0;
-            sz = sz0;
-            img = imread([im '.jpg']);
-            exist = 1;
+            m.pos = pos0;
+            m.spd = spd0;
+            m.sz = sz0;
+            m.img = imread([im '.jpg']);
+            m.exist = 1;
         end
         function move1(m)
             m.pos = mod(m.pos + m.spd, r);
