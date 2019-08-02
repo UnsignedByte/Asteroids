@@ -8,5 +8,5 @@ Screen('BlendFunction', window,GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 RestrictKeysForKbCheck([]);
 
 while 1
-    [p, t, s] = gameManager(window, rect)
+    s = gameManager(window, rect);
 end
