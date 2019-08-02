@@ -20,8 +20,8 @@ classdef player
         end
         function p = move(p,r)
             decayrate = 0.05;
-            p.velocity = p.velocity*(1-decayrate);
             p.position = mod(p.position + p.velocity, r(3:4));
+            p.velocity = p.velocity*(1-decayrate);
         end
         function [pos, dir] = getP(p)
             pos = p.position;
