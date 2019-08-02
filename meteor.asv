@@ -1,4 +1,4 @@
-classdef meteor < handle
+classdef meteor
     properties
         pos
         spd
@@ -16,9 +16,7 @@ classdef meteor < handle
         end
         function move1(m)
             m.pos = m.pos + m.spd;
-            if (m.pos(1) > r(1) || m.pos(1) < 0 || m.pos(2) > r(2) || m.pos(1) < 0)
-                m.exist = 0;
-            end
+            if (m.pos(1) > r(1) || m.pos(1) > r(1) || 
         end
         function [m1,m2] = split(m)
             m.exist = 0;
