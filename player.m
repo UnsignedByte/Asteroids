@@ -11,7 +11,7 @@ classdef player
             p.direction = 0;
         end
         function p = addThrust(p)
-            thrust = 0.5;
+            thrust = 0.25;
             p.velocity = p.velocity + [cosd(p.direction) sind(p.direction)]*thrust;
         end
         function p = turn(p, dir)
@@ -19,7 +19,7 @@ classdef player
            p.direction = p.direction+dir*turnrate;
         end
         function p = move(p,r)
-            decayrate = 0.05;
+            decayrate = 0.01;
             p.position = mod(p.position + p.velocity, r(3:4));
             p.velocity = p.velocity*(1-decayrate);
         end
